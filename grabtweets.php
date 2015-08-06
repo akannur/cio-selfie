@@ -22,7 +22,7 @@ $count = $_POST['count'];
 $api = "statuses_userTimeline";//$_POST['api'];
 */
 
-$q = "%23zenfestival";
+$q = "%23ZenFestival";
 $count = 21;
 $api = "search_tweets";
 

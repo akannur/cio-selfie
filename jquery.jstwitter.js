@@ -5,10 +5,11 @@ $(function() {
 	    // Set twitter hash/user, number of tweets & id/class to append tweets
 	    // You need to clear tweet-date.txt before toggle between hash and user
 	    // for multiple hashtags, you can separate the hashtag with OR, eg:
-	    // hash: '%23jquery OR %23css'			    
-	    search: '%23dockercon', //leave this blank if you want to show user's tweet
+	    // hash: '%23jquery OR %23css'	
+		//hash: '%23Rangitaranga',
+	    search: 'qwinix', //leave this blank if you want to show user's tweet
 	    user: 'akannur05', //username
-	    numTweets: 21, //number of tweets
+	    numTweets: 500, //number of tweets
 	    appendTo: '#jstwitter',
 	    useGridalicious: true,
 	    template: '<div class="item">{IMG}<div class="tweet-wrapper"><span class="text">{TEXT}</span>\
@@ -18,7 +19,7 @@ $(function() {
 	    // core function of jqtweet
 	    // https://dev.twitter.com/docs/using-search
 	    loadTweets: function() {
-
+			debugger;
 	        var request;
 	         
 	        // different JSON request {hash|user}
@@ -78,14 +79,17 @@ $(function() {
 			                //run grid-a-licious
 											$(JQTWEET.appendTo).gridalicious({
 												gutter: 13, 
-												width: 200, 
+												width: ($(window).width()/4), 
 												animate: true
 											});	                   
 										}                  
 	                    
 	               } else alert('no data returned');
 	             
-	            }   
+	            },
+				error: function(er){
+					console.log(er);
+				}
 	 
 	        });
 	 

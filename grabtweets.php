@@ -1,4 +1,4 @@
-<?
+<?php
 
 //We use already made Twitter OAuth library
 //https://github.com/mynetx/codebird-php
@@ -15,11 +15,16 @@ Codebird::setConsumerKey($CONSUMER_KEY, $CONSUMER_SECRET);
 $cb = Codebird::getInstance();
 $cb->setToken($ACCESS_TOKEN, $ACCESS_TOKEN_SECRET);
 
-
+/*
 //retrieve posts
 $q = $_POST['q'];
 $count = $_POST['count'];
-$api = $_POST['api'];
+$api = "statuses_userTimeline";//$_POST['api'];
+*/
+
+$q = "%23mysore_ruby";
+$count = 21;
+$api = "search_tweets";
 
 //https://dev.twitter.com/docs/api/1.1/get/statuses/user_timeline
 //https://dev.twitter.com/docs/api/1.1/get/search/tweets

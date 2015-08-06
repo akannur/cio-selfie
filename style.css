@@ -1,12 +1,18 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
 	
 	body {
-	    background:#ddd;
 	    font-family:arial;
 	    font-size:12px;
 	    margin:0;
-	    padding:10px 10px 0 10px;
+	    padding:0px;
 	    height:100%;
 	    color:#333;
+		
+		/*background-image: url('selfie.jpg');*/
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		background-color: rgba(34, 201, 118, 1);
 	}
 	
 	body.loading {
@@ -15,29 +21,33 @@
 		background-image: url(loading.gif);
 	}
 	
-	#info {
-		-webkit-border-radius:5px;
-		-moz-border-radius:5px;
-		border-radius:5px;				
-		background:#fcf8e3;
-		border:1px solid  #fbeed5;
-		width:100%;
-		max-width:900px;
-		margin:0 auto 10px auto;
+	header{
+		font-family: 'Roboto Condensed', sans-serif;
+		padding: 10px 4px;
+		background-color: #4d4d4d;
+	}
+
+	header a{
+		text-decoration: none;
+		color: rgba(34, 201, 118, 1);
 	}
 	
-		#info .info-wrapper {
-			padding:10px;
-		}
+	header a:hover{
+		text-decoration: underline;
+		color: rgba(34, 201, 118, 1);
+	}
+	
+	header .desc{
+		color: #fff;
+		font-size: 18px;
+		text-align: center;
+	}
 		
-		#info a {
-			color:#c09853;
-			text-decoration:none;
-		}
-		
-		#info p {
-			margin:5px 0 0 0;
-		}	
+	header .cta{
+		color: #fff;
+		font-size: 18px;
+		text-align: right;
+	}
 	
 	#jstwitter {
 		position: relative;

@@ -59,18 +59,18 @@ $(function() {
 	                      if (data[i].entities['media']) {
 	                        img = '<a href="' + url + '" target="_blank"><img src="' + data[i].entities['media'][0].media_url + '" /></a>';
 
-	                        $(JQTWEET.appendTo).append( JQTWEET.template.replace('{TEXT}', JQTWEET.ify.clean(data[i].text) )
-	                        .replace('{USER}', data[i].user.screen_name)
-	                        .replace('{IMG}', img)                                
-	                        .replace('{AGO}', JQTWEET.timeAgo(data[i].created_at) )
-	                        .replace('{URL}', url )			                            
-	                        );
+	               
 	                      }
 	                    } catch (e) {  
 	                      //no media
 	                    }
 	                  
-	                    
+	                    $(JQTWEET.appendTo).append( JQTWEET.template.replace('{TEXT}', JQTWEET.ify.clean(data[i].text) )
+	                        .replace('{USER}', data[i].user.screen_name)
+	                        .replace('{IMG}', img)                                
+	                        .replace('{AGO}', JQTWEET.timeAgo(data[i].created_at) )
+	                        .replace('{URL}', url )			                            
+	                        );
 	                  }
                   
                   } catch (e) {
